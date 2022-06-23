@@ -43,5 +43,12 @@ git pull (puxa a versão atual da branch principal para o PC local)
 git merge staging (une staging a master)
 git push (sobe a mudança p/ o github) 
 
+--git ignore (ignorar arquivos ao fazer o push)
+
+touch .gitignore (cria o arquivo de texto para inserir o nome.extensão dos arquivos a serem 
+ignorados durante o push. O próprio .gitignore deve ser adicionado).
+
+
+
 
 
