@@ -1,0 +1,28 @@
+Principais comandos do git
+--para primeira versão
+git init (iniciar)
+git status (modificações disponíveis)
+git add "nome completo do arquivo.extensão" (preparar para subir)
+git add . (com espaço e ponto, adiciona todos os arquivos)
+git commit -m "mensagem" (comitar o código com uma msg)
+git config --global user.email "seu@email.com" (e-mail utilizado no github)
+git config --global user.name "seu nome" (nome utilizado no github)
+git push (enviar alteração, com o link do github)
+git remote add origin link_do_git (direcionar ao diretório github)
+git push --set-upstream origin master (cria a branch master e add o projeto nela)
+(talvez abra a janela de conexão do git com github, para autorizar)
+
+--para atualizações
+
+git status (exibe modificações em vermelho)
+git add . (com espaço e ponto, adiciona todos os arquivos)
+git commit -m "modifiquei tal coisa" (comitar o código com uma msg)
+git push (enviar atualização)
+
+--para ver histórico de modificações
+
+git reflog
+
+--navegar entre versões do código
+
+git reset --hard (id desejado)
