@@ -26,7 +26,6 @@ git reflog
 --navegar entre versões do código
 
 git reset --hard (id desejado)
-<<<<<<< HEAD
 git reflog (verifica quais as versões existentes)
 git reset --hard (id desejado para voltar à versão atual)
 
@@ -39,12 +38,15 @@ git push --set-upstream origin staging (utilizado para novas branchs)
 
 --merge (unir)
 
+git branch (verificar em qual branch está)
 git checkout master (mudar para a branch quei irá receber a atualização)
 git pull (puxa a versão atual da branch principal para o PC local)
 git merge staging (une staging a master)
 git push (sobe a mudança p/ o github) 
 
+--Aprovação de merge por outro programador
 
 
-=======
->>>>>>> staging
+
+
+
