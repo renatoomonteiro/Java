@@ -1,0 +1,9 @@
+//Aula 164 - Polimorfismo
+package oo.polimorfismo;
+
+public class Feijao extends Comida {
+
+	public Feijao(double peso) {
+		super(peso);
+	}
+}

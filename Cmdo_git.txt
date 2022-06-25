@@ -38,15 +38,12 @@ git push --set-upstream origin staging (utilizado para novas branchs)
 
 --merge (unir)
 
-git branch (verificar em qual branch está)
 git checkout master (mudar para a branch quei irá receber a atualização)
 git pull (puxa a versão atual da branch principal para o PC local)
 git merge staging (une staging a master)
 git push (sobe a mudança p/ o github) 
 
---Aprovação de merge por outro programador
+--git ignore (ignorar arquivos ao fazer o push)
 
-
-
-
-
+touch .gitignore (cria o arquivo de texto para inserir o nome.extensão dos arquivos a serem 
+ignorados durante o push. O próprio .gitignore deve ser adicionado).
