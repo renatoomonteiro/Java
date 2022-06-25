@@ -1,7 +1,8 @@
 //Aula 164 - Polimorfismo
 package oo.polimorfismo;
 
-public class Comida {
+//Aula 168 - Classe Abstrata
+public abstract class Comida { // Comida passou a ser abstrata, logo, não poderá ser instanciada
 	private double peso;
 
 	public Comida(double peso) {

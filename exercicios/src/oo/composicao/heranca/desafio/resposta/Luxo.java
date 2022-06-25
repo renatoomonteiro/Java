@@ -2,7 +2,11 @@
 package oo.composicao.heranca.desafio.resposta;
 
 public interface Luxo {
-	public abstract void ligarAr();
+	public void ligarAr();
 
-	void desligarAr();
+	abstract void desligarAr();
+
+	default int velocidadeDoAr() {// Método padrão, não requer implementação na classe que o chama
+		return 1;
+	}
 }

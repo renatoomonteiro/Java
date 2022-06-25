@@ -5,7 +5,7 @@ public class Ferrari extends Carro implements Esportivo, Luxo {
 //Chamada do construtor padrão, sem informar o parâmetro.
 
 	boolean ligarTurbo = false, ligarAr = false;
-
+		
 	Ferrari() {
 		super(315);
 	}
@@ -32,6 +32,7 @@ public class Ferrari extends Carro implements Esportivo, Luxo {
 	public void desligarAr() {
 		ligarAr = false;
 	};
+	
 
 	@Override
 	public int getDelta() {
