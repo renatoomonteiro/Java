@@ -15,5 +15,6 @@ public class CalculoTeste2 {
 		// Chamada da multiplicação
 		// A função lambda recebe os parâmetros e os utiliza com os símbolos "->"
 		System.out.println(calc.executar(2, 3));
+		System.out.println(calc.legal());//Método default, oriundo da interface Calculo (método abstrato)
 	}
 }
