@@ -21,9 +21,8 @@ public class DesafioMap {
 
 		Function<String, Integer> binarioParaInt = s -> Integer.parseInt(s, 2); // Converte uma string binária para um
 																				// valor inteiro
-
 		nums.stream() // Coleção de dados
-				.map(Integer::toBinaryString) // Converte de inteiro para binário
-				.map(inverter).map(binarioParaInt).forEach(System.out::println); // ForEach para exibir os valores
+		.map(Integer::toBinaryString) // Converte de inteiro para binário
+		.map(inverter).map(binarioParaInt).forEach(System.out::println); // ForEach para exibir os valores
 	}
 }
