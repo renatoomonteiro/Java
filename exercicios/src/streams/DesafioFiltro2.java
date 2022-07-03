@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class DesafioFiltro {
+public class DesafioFiltro2 {
 
 	public static void main(String[] args) {
 		CartaoEstacionamento c1 = new CartaoEstacionamento("Renato", "Sgt", "FGJ8678", 122466, true);
@@ -22,11 +22,19 @@ public class DesafioFiltro {
 		List<CartaoEstacionamento> ce = Arrays.asList(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10);
 
 		Predicate<CartaoEstacionamento> possui = p -> p.possuiCartao;
-
+		// Para quem possui cartão
 		ce.stream().filter(a -> a.posto.equals("Sgt") || a.posto.equals("Cb")) // Verifica se é Sgt ou Cb
 				.filter(possui) // Verifica se possui ou não cartão
 				.map(a -> "O senhor " + a.posto + " " + a.nome + " está liberado(a) para estacionar") // Confirma com a
 																										// saudação
 				.forEach(System.out::println);
+
+		// Para quem não possui cartão
+		ce.stream().filter(possui.negate()) // Verifica se possui ou não cartão
+				.map(a -> "\nInfelizmente, o senhor " + a.posto + " " + a.nome
+						+ " não está liberado(a) para estacionar") // Confirma com a
+				// saudação
+				.forEach(System.out::println);
+
 	}
 }
