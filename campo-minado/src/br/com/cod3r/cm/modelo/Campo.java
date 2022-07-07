@@ -42,6 +42,7 @@ public class Campo {
 			vizinhos.add(vizinho);
 			return true;
 		} else if (deltaGeral == 2 && diagonal) {
+			vizinhos.add(vizinho);
 			return true;
 		} else {
 			return false;
@@ -74,5 +75,21 @@ public class Campo {
 
 	boolean vizinhancaSegura() {
 		return vizinhos.stream().noneMatch(v -> v.minado);
+	}
+
+	void minar() {
+		minado = true;
+	}
+
+	public boolean isMarcado() {
+		return marcado;
+	}
+	
+	public boolean isAberto() {
+		return aberto;
+	}
+	
+	public boolean isFechado() {
+		return !isAberto();
 	}
 }
