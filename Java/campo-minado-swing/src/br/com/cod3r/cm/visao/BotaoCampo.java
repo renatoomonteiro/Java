@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.SwingUtilities;
 
 import br.com.cod3r.cm.modelo.Campo;
 import br.com.cod3r.cm.modelo.CampoEvento;
@@ -28,6 +29,7 @@ public class BotaoCampo extends JButton implements CampoObservador, MouseListene
 	public BotaoCampo(Campo campo) {
 		this.campo = campo;
 		setBackground(BG_PADRAO);
+		setOpaque(true);
 		setBorder(BorderFactory.createBevelBorder(0));
 
 		addMouseListener(this);
@@ -47,24 +49,50 @@ public class BotaoCampo extends JButton implements CampoObservador, MouseListene
 			break;
 
 		case EXPLODIR:
-			aplicarEstiloAbrir();
+			aplicarEstiloExplodir();
 			break;
 
 		default:
 			aplicarEstiloPadrao();
 		}
+		
+		//Método que irá garantir a renderização dos estilos
+		//após serem utilizados
+		SwingUtilities.invokeLater(()-> {
+			repaint();
+			validate();
+		});
 	}
 
 	private void aplicarEstiloPadrao() {
-
+		setBackground(BG_PADRAO);
+		setBorder(BorderFactory.createBevelBorder(0));
+		setText("");
 	}
 
+	
+	private void aplicarEstiloExplodir() {
+		setBackground(BG_EXPLODIR);
+		setForeground(Color.WHITE);
+		setText("X");
+	}
+	
 	private void aplicarEstiloMarcar() {
-
+		setBackground(BG_MARCAR);
+		setForeground(Color.BLACK);
+		setText("M");
 	}
 
 	// Alterar a estrutura do botão, de acordo com o método chamado
 	private void aplicarEstiloAbrir() {
+		
+		setBorder(BorderFactory.createLineBorder(Color.GRAY));
+		
+		if(campo.isMinado()) {
+			setBackground(BG_EXPLODIR);
+			return;
+		}
+		
 		setBackground(BG_PADRAO);
 		setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
