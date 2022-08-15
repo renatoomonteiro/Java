@@ -1,14 +1,19 @@
 //Aula 330 - Entidade Usuário
-
+// Aula 331 - Novo Usuário
 package modelo.basico;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 // A classe e a tabela devem ter o mesmo nome
 @Entity
 public class Usuario {
+	// @GeneratedValue = auto incremento
+	// @Id = defini a coluna como id
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome, email;
 
