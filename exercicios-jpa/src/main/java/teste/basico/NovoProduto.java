@@ -13,6 +13,7 @@ public class NovoProduto {
 
 		DAO<Produto> dao = new DAO<>(Produto.class);
 		dao.incluirAtomico(produto).fechar();
+
 		System.out.println("Id do produto: " + produto.getId());
 	}
 
