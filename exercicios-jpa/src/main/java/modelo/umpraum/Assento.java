@@ -1,4 +1,5 @@
 // Aula 343 - Um Pra Um #01
+// Aula 346 - Um Pra Um #03
 
 package modelo.umpraum;
 
@@ -6,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +20,12 @@ public class Assento {
 
 	private String nome;
 
+	//Mapear a relação um para um através do atributo assento
+	@OneToOne(mappedBy = "assento")
+	private Cliente cliente;
+	
+	
+	
 	public Assento() {
 		// Método construtor padrão = ctrl + space
 	}
@@ -41,5 +49,15 @@ public class Assento {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	
 
 }

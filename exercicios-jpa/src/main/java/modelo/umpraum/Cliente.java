@@ -1,7 +1,9 @@
 // Aula 343 - Um Pra Um #01
+//Aula 345 - Um Pra Um #02
 
 package modelo.umpraum;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +22,7 @@ public class Cliente {
 
 	private String nome;
 
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.PERSIST})
 	// Garantir que essa coluna não aceite valores duplicados
 	@JoinColumn(name = "assento_id", unique = true)
 	private Assento assento;
