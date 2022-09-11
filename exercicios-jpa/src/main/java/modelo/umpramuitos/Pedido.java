@@ -1,14 +1,18 @@
 //Aula 347 - Um Pra Muitos #01
+//Aula 348 - Um Pra Muitos #02
 
 package modelo.umpramuitos;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Pedido {
@@ -18,9 +22,13 @@ public class Pedido {
 	private Long id;
 	@Column(nullable = false)
 	private Date data;
-
+	
+    // Este é o valor default de fetch ( ToMany -> LAZY)
+	@OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
+	private List<ItemPedido> itens;
+	
 	public Pedido() {
-
+		this(new Date());
 	}
 
 	public Pedido(Date data) {
@@ -42,6 +50,14 @@ public class Pedido {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+
+	public List<ItemPedido> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<ItemPedido> itens) {
+		this.itens = itens;
 	}
 
 }

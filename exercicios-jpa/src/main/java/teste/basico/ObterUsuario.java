@@ -1,4 +1,5 @@
 // Aula 332 - Obter Usuário
+//Aula 352 - Named Query
 
 package teste.basico;
 
