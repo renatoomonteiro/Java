@@ -1,0 +1,38 @@
+/*
+Aula 375 - Contador #03
+Aula 376 - Contador #04
+
+*/
+
+.conteudo{
+	-fx-background-color: black;
+	-fx-font-family: Oswald;
+	-fx-font-size: 30;
+}
+
+.titulo{
+	-fx-text-fill: #48b2ee;
+	-fx-font-size: 36px;		
+} 
+
+.numero{
+	-fx-font-size: 40;	
+	-fx-text-fill: #aaa;
+}
+
+.botoes{
+	-fx-background-color: #102030;
+	-fx-text-fill: #48b2ee;
+	-fx-font-size: 24px;
+	-fx-min-width: 60px; 	
+	-fx-min-heigth: 60px;
+	-fx-background-radius: 30px;
+} 
+
+.verde{
+	-fx-text-fill: #80ff00;
+}
+
+.vermelha{
+	-fx-text-fill: #ff0000;
+}
