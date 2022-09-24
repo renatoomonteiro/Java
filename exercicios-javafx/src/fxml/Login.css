@@ -1,0 +1,19 @@
+/*Aula 390 - Usando CSS com FXML*/
+
+.login{
+	-fx-background-color: linear-gradient(to right, rgb(20, 136, 204), rgb(120, 255, 214));
+}
+
+.login-titulo{
+	-fx-font-size: 24px;
+	-fx-text-fill: #fff;
+}
+
+.login-form-label{
+	-fx-font-size: 16px;
+	-fx-text-fill: #fff;	
+}
+
+.login-form-botao{
+	-fx-font-size: 16px;
+}
